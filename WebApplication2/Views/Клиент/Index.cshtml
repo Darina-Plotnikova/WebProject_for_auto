@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication2.Models.Клиент>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Название___организации)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Город)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Адрес)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Телефон)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Почта)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Контактное_лицо)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Название___организации)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Город)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Адрес)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Телефон)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Почта)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Контактное_лицо)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_клиента }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_клиента }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_клиента })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h1>Проект по предмету "Веб-программирование"</h1>
+    <p class="lead">Проект разработан с помощью технологии ASP.NET</p>
+</div>
+
+<div>
+    @Html.ActionLink("Закупки", "Index", "Закупка")
+    @Html.ActionLink("Клиенты", "Index", "Клиент")
+    @Html.ActionLink("Объекты", "Index", "Объект")
+    @Html.ActionLink("Материалы", "Index", "Материал")
+</div>

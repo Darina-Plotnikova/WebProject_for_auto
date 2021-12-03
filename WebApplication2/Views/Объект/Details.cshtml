@@ -1,0 +1,66 @@
+﻿@model WebApplication2.Models.Объект
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Объект</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Наименование_заказа)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Наименование_заказа)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Дата_принятия_заказа)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Дата_принятия_заказа)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Срок_выполнения_работ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Срок_выполнения_работ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Вид_работ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Вид_работ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Статус_заказа)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Статус_заказа)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Клиент.Название___организации)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Клиент.Название___организации)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_объекта }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

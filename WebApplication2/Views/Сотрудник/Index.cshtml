@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplication2.Models.Сотрудник>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ФИО)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Должность)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Стаж)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Телефон)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Оклад)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ФИО)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Должность)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Стаж)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Телефон)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Оклад)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_сотрудника }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_сотрудника }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_сотрудника })
+        </td>
+    </tr>
+}
+
+</table>

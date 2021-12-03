@@ -1,0 +1,66 @@
+﻿@model WebApplication2.Models.Клиент
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Клиент</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Название___организации)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Название___организации)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Город)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Город)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Адрес)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Адрес)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Телефон)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Телефон)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Почта)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Почта)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Контактное_лицо)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Контактное_лицо)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_клиента }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

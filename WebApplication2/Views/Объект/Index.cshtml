@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication2.Models.Объект>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Наименование_заказа)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Дата_принятия_заказа)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Срок_выполнения_работ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Вид_работ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Статус_заказа)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Клиент.Название___организации)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Наименование_заказа)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Дата_принятия_заказа)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Срок_выполнения_работ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Вид_работ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Статус_заказа)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Клиент.Название___организации)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_объекта }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_объекта }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_объекта })
+        </td>
+    </tr>
+}
+
+</table>
